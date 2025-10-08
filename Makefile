@@ -2,6 +2,9 @@ scale_status: peek_adaptive_with_status_array_kbound_thread_32.exe peek_adaptive
 
 scale_swap: peek_adaptive_with_edge_swap_kbound_thread_32.exe peek_adaptive_with_edge_swap_kbound_thread_16.exe peek_adaptive_with_edge_swap_kbound_thread_8.exe peek_adaptive_with_edge_swap_kbound_thread_4.exe peek_adaptive_with_edge_swap_kbound_thread_2.exe peek_adaptive_with_edge_swap_kbound_thread_1.exe
 
+peek_limitations_test.exe: ./experiments/PeeKLimitations.cpp
+	g++ -O2 -std=c++17 -I./includes -fopenmp -o peek_limitations_test.exe ./experiments/PeeKLimitations.cpp
+
 runSTPruning.exe: ./experiments/runSTPruning.cpp
 	g++ -O3 -I./includes -fopenmp -o runSTPruning.exe ./experiments/runSTPruning.cpp
 
